@@ -1,0 +1,47 @@
+def mover_bispo():
+    print("Movimento do Bispo (Diagonal Superior Direita):")
+    linha = 4     # posição inicial arbitrária
+    coluna = 4
+    for i in range(BISPO_PASSOS):
+        linha -= 1       # sobe uma linha
+        coluna += 1      # vai para a direita
+        print(f"Passo {i + 1}: Linha {linha}, Coluna {coluna} -> Diagonal Superior Direita")
+    print()
+
+# ==============================
+# Movimento da Torre
+# ==============================
+def mover_torre():
+    print("Movimento da Torre (Direita):")
+    posicao = 0
+    while posicao < TORRE_PASSOS:
+        posicao += 1
+        print(f"Passo {posicao}: Direita")
+    print()
+
+# ==============================
+# Movimento da Rainha
+# ==============================
+def mover_rainha():
+    print("Movimento da Rainha (Esquerda):")
+    for i in range(RAINHA_PASSOS):
+        print(f"Passo {i + 1}: Esquerda")
+    print()
+
+# ==============================
+# Função Principal
+# ==============================
+def main():
+    print("=== Desafio de Xadrez - MateCheck ===\n")
+    
+    mover_bispo()
+    mover_torre()
+    mover_rainha()
+
+    print("=== Fim da Simulação ===")
+
+# ==============================
+# Início do programa
+# ==============================
+if __name__ == "__main__":
+    main()
